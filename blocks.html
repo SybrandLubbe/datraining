@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blocks Library — DA Training for Bimota</title>
+<meta name="description" content="Live-loaded catalogue of Bimota EDS blocks and templates, with copyable snippets and a try-in-page tool.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<nav class="site-nav" id="site-nav" data-root=".."></nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">pages/blocks.html</span>
+    <h1>Blocks Library</h1>
+    <p>Loaded live from the project's block &amp; template manifests. Each card gives you a copy/paste snippet for da.live.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="block-toolbar">
+      <input type="search" id="block-search" placeholder="Search blocks (e.g. hero, cards, dealer)…" aria-label="Search blocks">
+      <select id="block-filter" aria-label="Filter">
+        <option value="all">All blocks</option>
+        <option value="hero,cards,teaser,text-with-image,columns,feature,highlight,gallery,carousel,title,text,image,news-stories">Content &amp; layout</option>
+        <option value="vehicle-selector,specification,specification-table,table">Product &amp; specs</option>
+        <option value="cta-buttons,form,country-selector,dealer-locator,woosmapdealers,fragment">Interactive &amp; utility</option>
+      </select>
+    </div>
+    <p class="status-line" id="status-line">Loading manifest…</p>
+
+    <div class="grid cols-3" id="blocks-grid"></div>
+
+    <h2>Templates</h2>
+    <p class="lead">Page-level templates combine several blocks into a ready-made layout. Use these as a starting point rather than assembling every page from scratch.</p>
+    <div class="grid cols-2" id="templates-grid"></div>
+
+    <!-- Try in page ------------------------------------------------------ -->
+    <div class="try-panel" id="try-panel">
+      <h2 style="margin-top:0;">Try a block in page</h2>
+      <p>Pick a block, fill in the fields, and see how it renders — then copy the generated da.live table.</p>
+
+      <div class="field">
+        <label for="try-block-select">Block</label>
+        <select id="try-block-select"></select>
+      </div>
+
+      <div id="try-fields"></div>
+
+      <div class="try-preview" id="try-preview" aria-live="polite"></div>
+
+      <h3>Copy/paste snippet</h3>
+      <div class="code-wrap">
+        <pre class="code" id="try-snippet"></pre>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+<script src="../assets/js/app.js" defer></script>
+<script src="./blocks-lib.js" defer></script>
+</body>
+</html>

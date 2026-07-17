@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Author Guide — DA Training for Bimota</title>
+<meta name="description" content="Full author manual for building Bimota pages with da.live.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  #doc-content { max-width: 760px; }
+  #doc-content h2 { border-top: 1px solid var(--line); padding-top: 28px; }
+  #doc-content table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 0.92rem; }
+  #doc-content table th, #doc-content table td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  #doc-content table th { background: var(--paper-dim); }
+  #doc-content code { background: var(--paper-dim); padding: 2px 6px; border-radius: 4px; font-family: var(--mono); font-size: 0.88em; }
+  #doc-content pre { background: var(--code-bg); color: var(--code-fg); padding: 14px 16px; border-radius: 8px; overflow-x: auto; }
+  #doc-content pre code { background: none; padding: 0; color: inherit; }
+  #doc-content blockquote { border-left: 4px solid var(--bimota-red); background: var(--paper-dim); margin: 16px 0; padding: 10px 18px; border-radius: 0 8px 8px 0; }
+  #toc { border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px; margin: 20px 0 30px; background: var(--paper-dim); }
+  #toc a { text-decoration: none; }
+</style>
+</head>
+<body>
+<nav class="site-nav" id="site-nav" data-root=".."></nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">docs/authors.md</span>
+    <h1>Author Guide</h1>
+    <p>The complete manual for content authors building Bimota pages in da.live.</p>
+    <p><a class="btn secondary" href="authors.md" target="_blank" rel="noopener">View raw Markdown ↗</a></p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div id="doc-content">Loading guide…</div>
+  </div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script>
+  fetch('authors.md', { cache: 'no-store' })
+    .then((r) => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.text();
+    })
+    .then((md) => {
+      document.getElementById('doc-content').innerHTML = marked.parse(md);
+    })
+    .catch((err) => {
+      document.getElementById('doc-content').innerHTML =
+        `<div class="callout warn"><strong>Couldn't load authors.md automatically</strong> (${err.message}). ` +
+        `Open <a href="authors.md">authors.md</a> directly, or check that this page is served over http(s) rather than opened as a local file:// path.</div>`;
+    });
+</script>
+</body>
+</html>

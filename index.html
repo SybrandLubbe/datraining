@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DA Training for Bimota — Adobe Edge Delivery / da.live</title>
+<meta name="description" content="Internal training site teaching Bimota content authors how to build pages with Adobe Edge Delivery Services and da.live.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<nav class="site-nav" id="site-nav" data-root="."></nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Internal training · content authors</span>
+    <h1>Learn to build Bimota pages with Adobe Edge Delivery &amp; da.live</h1>
+    <p>This site teaches you how to find blocks, assemble pages for any country/language, and publish changes to <strong>bimota.com</strong> — no code required.</p>
+    <p>
+      <a class="btn" href="docs/authors.html">Open the Author Guide →</a>
+      <a class="btn secondary" href="pages/blocks.html" style="margin-left:10px;">Browse the Blocks Library</a>
+    </p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <h2>Quick start</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>1. Understand DA</h3>
+        <p>Read <a href="docs/authors.html#what-is-da">what da.live is</a> and how it relates to bimota.com's Edge Delivery site.</p>
+      </div>
+      <div class="card">
+        <h3>2. Explore the blocks</h3>
+        <p>Open the <a href="pages/blocks.html">Blocks Library</a> — it loads the live block/template manifests and lets you try one out.</p>
+      </div>
+      <div class="card">
+        <h3>3. Build a page</h3>
+        <p>Walk through a full <a href="examples/it_it.html">/it/it example page</a>, then use the guide's copy/paste snippets for your own locale.</p>
+      </div>
+    </div>
+
+    <h2>What's in this training site</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>📘 Author Guide</h3>
+        <p><a href="docs/authors.html">docs/authors.md</a> — the full manual: what DA is, how to assemble pages, localization, preview/publish steps, troubleshooting, and best practices.</p>
+      </div>
+      <div class="card">
+        <h3>🧩 Blocks Library</h3>
+        <p><a href="pages/blocks.html">pages/blocks.html</a> — live-loaded catalogue of every block and template, with copyable snippets and a "try in page" form.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Example pages</h3>
+        <p>Full mock pages for <a href="examples/it_it.html">/it/it</a>, <a href="examples/us_en.html">/us/en</a>, and <a href="examples/de_de.html">/de/de</a> showing localization and fallback patterns.</p>
+      </div>
+      <div class="card">
+        <h3>🚀 Build &amp; deploy</h3>
+        <p>See the <a href="https://github.com/sybrandlubbe/datraining#readme" target="_blank" rel="noopener">README</a> for pushing this site to GitHub Pages and the GitHub Actions workflow that automates it.</p>
+      </div>
+    </div>
+
+    <h2>Key facts about the Bimota project</h2>
+    <table class="da-block-table">
+      <tr><th>Item</th><th>Value</th></tr>
+      <tr><td>Public site</td><td><a href="https://www.bimota.com/" target="_blank" rel="noopener">www.bimota.com</a></td></tr>
+      <tr><td>Preview environment</td><td><code>https://main--bimota--kawaind.aem.page</code></td></tr>
+      <tr><td>Production (live) environment</td><td><code>https://main--bimota--kawaind.aem.live</code></td></tr>
+      <tr><td>Blocks source of truth</td><td><a href="https://github.com/kawaind/bimota/tree/main/blocks" target="_blank" rel="noopener">github.com/kawaind/bimota/blocks</a></td></tr>
+      <tr><td>Authoring model</td><td>da.live (document-based authoring — tables of blocks, not Universal Editor)</td></tr>
+      <tr><td>URL/localization pattern</td><td><code>/{country}/{lang}/…</code>, e.g. <code>/it/it/</code>, <code>/us/en/</code>, <code>/de/de/</code></td></tr>
+    </table>
+
+    <div class="callout tip">
+      <strong>Not a developer?</strong> Start with the <a href="docs/authors.html">Author Guide</a> — it's written specifically for content authors, with plain-English steps and copy/paste snippets.
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
