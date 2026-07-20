@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>18 Country Selector — Bimota DA Training</title>
+<meta name="description" content="The header locale picker: countries, flags, and links to each localized site.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body>
+<div id="site-nav" data-root=".."></div>
+<div class="jcr-path-bar" id="jcr-path-bar"></div>
+
+<div class="training-shell">
+  <nav class="tree-sidebar" id="tree-sidebar" data-root=".." data-current="country-selector"></nav>
+
+  <main class="training-main">
+    <div class="module-crumb">/content/bimota-training/blocks/country-selector</div>
+    <div class="module-badges mb-2">
+      <span class="badge bg-light text-dark border">Interactive & utility</span>
+      <span class="badge badge-verified">Verified guide</span>
+      <span class="text-secondary small ms-1">5 min read</span>
+    </div>
+    <h1 class="h2">Country Selector</h1>
+    <p class="text-secondary">The header locale picker: countries, flags, and links to each localized site.</p>
+
+    
+      <p class="lead fs-6">The <strong>Country Selector</strong> block is a custom block designed to display the list of countries where the Bimota website is available. Each country is represented with its national flag and linked to the corresponding localized version of the site, with respective language options. It gives visitors a clear, intuitive way to navigate to their regional Bimota site.</p>
+      <h2 class="h5 mt-4">Where it lives, and who can edit it</h2><p>This block is <strong>admin-only</strong>. If you are an admin or have the required access, navigate to <a href="https://da.live/#/kawaind/bimota" target="_blank" rel="noopener">da.live/#/kawaind/bimota</a>, then open the <code>index</code> document at the root of the project. That single document holds the entire country list shown in every page's header.</p><h2 class="h5 mt-4">Adding a new country</h2><ol><li>Open the <code>index</code> document in da.live edit mode. You'll see a table named <strong>country-selector</strong> with a “Choose your country” header row, then one row per region (e.g. Europe) listing countries with their flags.</li><li>Click into the region's cell (or add a new region row below the same table if it's a brand-new region), then use <strong>“Edit block” → add column</strong> if you need a new row/column for the country group.</li><li>Click the <strong>“List”</strong> (bullet list) icon to add a new bullet point, and type the country name — e.g. <code>Japan</code>.</li><li>Select that text and click <strong>“Edit link”</strong>. Paste in the homepage URL for that locale, e.g. <code>/jp/2_en</code> for the English version of the Japan site. You can add both language versions as separate bullets under the same country (e.g. “Japan (en)” and “Japan (jp)”).</li><li>For the flag icon itself, follow the same pattern as an existing row in the table — copying an existing country's row is the safest way to match the exact flag format already in use.</li></ol><h2 class="h5 mt-4">Preview and publish</h2><p>After reviewing the content, click <strong>Preview</strong>. Then navigate to the preview URL for the new locale, e.g. <code>https://da.live/edit#/kawaind/bimota/jp/2_en/index</code>, and click Preview again to confirm the updated Country Selector renders correctly with the new entry before publishing.</p>
+      
+      <h2 class="h5 mt-4">What you fill in</h2>
+      <table class="table table-sm table-bordered">
+        <tbody><tr><td class="fw-semibold" style="width:32%;">Header row</td><td>"Choose your country" heading cell, paired with a representative image (e.g. a bike photo).</td></tr><tr><td class="fw-semibold" style="width:32%;">Region row</td><td>A region label, e.g. "Europe", followed by a bulleted list of countries in that region.</td></tr><tr><td class="fw-semibold" style="width:32%;">Country bullet</td><td>Flag + country name as a link to that locale's homepage, e.g. Italia (it) / Italy (en).</td></tr><tr><td class="fw-semibold" style="width:32%;">metadata block</td><td>A second table at the bottom of the same document with theme = country-selector-page. Required for the block to render correctly — don't remove it.</td></tr></tbody>
+      </table>
+      
+      <img src="../assets/img/modules/country-selector/img-002.png" alt="The country-selector table in da.live: “Choose your country” header, regions, and flagged country links." class="module-shot img-fluid">
+      <p class="module-shot-caption">The country-selector table in da.live: “Choose your country” header, regions, and flagged country links.</p>
+      <img src="../assets/img/modules/country-selector/img-005.png" alt="Adding a new country: Edit block → add column, then List to add the bullet." class="module-shot img-fluid">
+      <p class="module-shot-caption">Adding a new country: Edit block → add column, then List to add the bullet.</p>
+      <img src="../assets/img/modules/country-selector/img-006.png" alt="The published result — a new “Japan” entry appears under Europe alongside Italy and the UK." class="module-shot img-fluid">
+      <p class="module-shot-caption">The published result — a new “Japan” entry appears under Europe alongside Italy and the UK.</p>
+      <h2 class="h5 mt-4">Copy/paste snippet</h2>
+      <div class="code-wrap">
+        <pre class="code-block">| Country Selector | countries |
+|---|---|</pre>
+      </div>
+      <p class="mt-3"><a href="https://github.com/kawaind/bimota/tree/main/blocks/country-selector" target="_blank" rel="noopener">View source on GitHub &rarr;</a></p>
+      <div class="alert alert-success mt-4" role="alert">
+        <strong>Verified module.</strong> Written from Country Selector Block guide (internal PDF).
+      </div>
+
+    <div class="mark-complete-row">
+      <button type="button" class="btn btn-outline-primary" id="mark-complete-btn" data-slug="country-selector">Mark this module as reviewed</button>
+    </div>
+
+    <div class="module-nav-footer">
+      <div><a href="cta-buttons.html">&larr; 17 CTA Buttons</a></div>
+      <div><a href="dealer-locator.html">19 Dealer Locator &rarr;</a></div>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/modules-data.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/nav-tree.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blocks Library — DA Training for Bimota</title>
+<meta name="description" content="Every Bimota EDS block explained: what it does, how it works, and when to use it, with copyable snippets.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body>
+<div id="site-nav" data-root=".."></div>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="eyebrow d-block mb-2">pages/blocks.html</span>
+    <h1 class="display-6 fw-bold">Blocks Library</h1>
+    <p class="lead">Every block in the project, explained in plain English: what it does, how it works, and when to reach for it — plus a copy/paste snippet for each.</p>
+  </div>
+</header>
+
+<main class="py-5">
+  <div class="container">
+
+    <p class="text-secondary small mb-2" id="status-line">Checking the live manifest…</p>
+
+    <div class="row g-2 align-items-center mb-4">
+      <div class="col-md-6">
+        <input type="search" id="block-search" class="form-control" placeholder="Search blocks (e.g. hero, cards, dealer)…" aria-label="Search blocks">
+      </div>
+      <div class="col-md-6">
+        <div class="btn-group w-100" role="group" aria-label="Filter by category" id="category-filter">
+          <input type="radio" class="btn-check" name="cat" id="cat-all" value="all" checked>
+          <label class="btn btn-outline-primary" for="cat-all">All</label>
+
+          <input type="radio" class="btn-check" name="cat" id="cat-layout" value="layout">
+          <label class="btn btn-outline-primary" for="cat-layout">Layout &amp; content</label>
+
+          <input type="radio" class="btn-check" name="cat" id="cat-product" value="product">
+          <label class="btn btn-outline-primary" for="cat-product">Product &amp; specs</label>
+
+          <input type="radio" class="btn-check" name="cat" id="cat-interactive" value="interactive">
+          <label class="btn btn-outline-primary" for="cat-interactive">Interactive</label>
+
+          <input type="radio" class="btn-check" name="cat" id="cat-site" value="site">
+          <label class="btn btn-outline-primary" for="cat-site">Site-wide</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="blocksAccordion"></div>
+    <p class="text-center text-secondary small py-4 d-none" id="no-results">No blocks match your search/filter.</p>
+
+    <!-- Try it -------------------------------------------------------- -->
+    <div class="card mt-5" id="try-panel">
+      <div class="card-body">
+        <h2 class="h4">Try a block</h2>
+        <p class="text-secondary">Pick a block, fill in the fields, and see how it renders — then copy the generated da.live table.</p>
+
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="mb-3">
+              <label for="try-block-select" class="form-label fw-bold">Block</label>
+              <select id="try-block-select" class="form-select"></select>
+            </div>
+            <div id="try-fields"></div>
+          </div>
+          <div class="col-lg-7">
+            <div class="fw-bold small text-uppercase text-secondary mb-2">Live preview</div>
+            <div class="border rounded p-3 bg-white mb-3" id="try-preview" aria-live="polite"></div>
+            <div class="fw-bold small text-uppercase text-secondary mb-2">Copy/paste snippet</div>
+            <div class="code-wrap">
+              <pre class="code-block" id="try-snippet"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="./block-data.js"></script>
+<script src="./blocks-lib.js" defer></script>
+</body>
+</html>

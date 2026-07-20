@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bimota DA Training — /content/bimota-training</title>
+<meta name="description" content="Internal training for Bimota content authors: every da.live/EDS block explained, module by module.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+<div id="site-nav" data-root="."></div>
+<div class="jcr-path-bar" id="jcr-path-bar"></div>
+
+<div class="training-shell">
+  <nav class="tree-sidebar" id="tree-sidebar" data-root="." data-current=""></nav>
+
+  <main class="training-main">
+    <span class="eyebrow d-block mb-2 text-uppercase text-danger fw-bold small">Internal training &middot; content authors</span>
+    <h1 class="h2">Bimota DA Training</h1>
+    <p class="lead">Every da.live / Adobe Edge Delivery block used on bimota.com, explained module by module — built the same way as our AEM backend onboarding curriculum, so it should feel familiar.</p>
+
+    <div class="row g-3 mb-4">
+      <div class="col-md-4">
+        <div class="card h-100"><div class="card-body">
+          <h2 class="h6">📘 Author Guide</h2>
+          <p class="small text-secondary mb-0">Full narrative walkthrough: what DA is, building a page, localization, publishing. <a href="docs/authors.html">Open it →</a></p>
+        </div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100"><div class="card-body">
+          <h2 class="h6">📚 Full Blocks Library</h2>
+          <p class="small text-secondary mb-0">Every block on one page, accordion-style, if you'd rather scan than click through modules. <a href="pages/blocks.html">Open it →</a></p>
+        </div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100"><div class="card-body">
+          <h2 class="h6">🌍 Example pages</h2>
+          <p class="small text-secondary mb-0">Full mock pages showing blocks assembled for /it/it, /us/en, /de/de. <a href="examples/it_it.html">Open it →</a></p>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="alert alert-primary" role="alert">
+      <strong>How this works:</strong> the left tree mirrors the real <code>blocks/</code> folder in
+      <a href="https://github.com/kawaind/bimota/tree/main/blocks" target="_blank" rel="noopener">github.com/kawaind/bimota</a>.
+      Modules with a <span class="badge badge-verified">Verified guide</span> badge have been checked against an internal
+      authoring PDF; modules marked <span class="badge badge-draft">Draft</span> are accurate (written from the block's
+      actual source code) but haven't been reviewed against a guide yet. We're upgrading these <strong>section by section</strong> —
+      CTA Buttons, Country Selector, Dealer Locator, Woosmap Dealers, Feature, Footer, and Gallery are verified so far.
+    </div>
+
+    <h2 class="h4 mt-4 mb-3">All modules</h2>
+    <div class="row g-3" id="module-grid"></div>
+
+  </main>
+</div>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/modules-data.js"></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/nav-tree.js" defer></script>
+</body>
+</html>

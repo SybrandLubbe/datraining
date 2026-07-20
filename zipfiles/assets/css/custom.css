@@ -1,0 +1,252 @@
+/* Bimota DA Training Site — Bootstrap theme overrides.
+   Bootstrap 5 (via CDN) supplies the grid, nav, cards, accordion, forms.
+   This file only adds brand color + a few small tweaks on top of it. */
+
+:root {
+  --bs-primary: #c8102e;
+  --bimota-red: #c8102e;
+  --bimota-ink: #1a1a1a;
+}
+
+body {
+  color: #212529;
+}
+
+/* Brand color applied to Bootstrap's primary utility classes */
+.btn-primary {
+  background-color: var(--bimota-red);
+  border-color: var(--bimota-red);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #a30d25;
+  border-color: #a30d25;
+}
+.btn-outline-primary {
+  color: var(--bimota-red);
+  border-color: var(--bimota-red);
+}
+.btn-outline-primary:hover {
+  background-color: var(--bimota-red);
+  border-color: var(--bimota-red);
+}
+.text-primary { color: var(--bimota-red) !important; }
+.bg-primary { background-color: var(--bimota-red) !important; }
+a { color: var(--bimota-red); }
+.navbar-brand .accent { color: var(--bimota-red); }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: var(--bimota-red);
+}
+.accordion-button:not(.collapsed) {
+  background-color: #fdecee;
+  color: var(--bimota-ink);
+}
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(200, 16, 46, 0.25);
+}
+
+/* Dark page header used on every page ("jumbotron" replacement) */
+.page-hero {
+  background: linear-gradient(135deg, #111 0%, #2a2a2a 100%);
+  color: #fff;
+  padding: 3.5rem 0 2.5rem;
+}
+.page-hero .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  color: var(--bimota-red);
+  font-weight: 700;
+}
+.page-hero p { color: #d8d8d8; }
+.page-hero a.link-light-underline {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Code blocks */
+pre.code-block {
+  background: #1e1e1e;
+  color: #f2f2f2;
+  padding: 1rem 1.1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  position: relative;
+  margin: 0;
+}
+.code-wrap { position: relative; }
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+}
+
+/* Block library cards */
+.block-card img.preview {
+  height: 140px;
+  object-fit: cover;
+  background: #f5f5f5;
+}
+.block-card .preview-placeholder {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  color: #6c757d;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #dee2e6;
+}
+.badge-category-layout { background: #0d6efd; }
+.badge-category-product { background: #6610f2; }
+.badge-category-interactive { background: #198754; }
+.badge-category-site { background: #6c757d; }
+
+/* Sticky TOC sidebar on the Author Guide */
+.toc-sidebar { position: sticky; top: 84px; }
+.toc-sidebar .nav-link { padding: 0.25rem 0; font-size: 0.9rem; }
+
+/* Example pages (mock EDS render, Bootstrap-based) */
+.eds-hero {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 5.5rem 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.eds-img-ph {
+  background: #f5f5f5;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 0.8rem;
+  min-height: 180px;
+}
+.locale-banner { background:#fff3cd; border:1px solid #ffe08a; }
+
+footer.site-footer { border-top: 1px solid #dee2e6; padding: 1.75rem 0; color: #6c757d; font-size: 0.85rem; }
+
+/* ------------------------------------------------------------------ */
+/* JCR-tree training layout (sidebar + breadcrumb + module content)    */
+/* ------------------------------------------------------------------ */
+.jcr-path-bar {
+  background: #14171a;
+  color: #9aa4ad;
+  font-family: var(--bs-font-monospace, monospace);
+  font-size: 0.8rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #23272b;
+}
+.jcr-path-bar .diamond { color: var(--bimota-red); }
+.jcr-path-bar .progress-count { float: right; color: #6c757d; }
+
+.training-shell { display: flex; min-height: calc(100vh - 160px); }
+
+.tree-sidebar {
+  width: 300px;
+  flex: 0 0 300px;
+  background: #1b1e21;
+  color: #c9d1d9;
+  padding: 1rem 0 2rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 64px);
+  position: sticky;
+  top: 64px;
+  font-size: 0.86rem;
+}
+.tree-sidebar .tree-root {
+  padding: 0 1rem 0.75rem;
+  color: #8b949e;
+  font-family: var(--bs-font-monospace, monospace);
+  font-size: 0.78rem;
+  border-bottom: 1px solid #2d333b;
+  margin-bottom: 0.5rem;
+}
+.tree-sidebar a.tree-home {
+  display: block;
+  padding: 0.3rem 1rem;
+  color: #c9d1d9;
+  text-decoration: none;
+  font-weight: 600;
+}
+.tree-sidebar a.tree-home:hover { background: #262b30; }
+.tree-category-label {
+  padding: 0.6rem 1rem 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.68rem;
+  color: #6e7681;
+  font-weight: 700;
+}
+.tree-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 1rem 0.3rem 1.5rem;
+  color: #c9d1d9;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+.tree-item:hover { background: #262b30; color: #fff; }
+.tree-item.active { background: #2d333b; border-left-color: var(--bimota-red); color: #fff; font-weight: 600; }
+.tree-item .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  border: 1px solid #6e7681;
+  flex: 0 0 8px;
+  background: transparent;
+}
+.tree-item .dot.done { background: #2ea043; border-color: #2ea043; }
+.tree-item .num { color: #6e7681; font-family: var(--bs-font-monospace, monospace); font-size: 0.75rem; flex: 0 0 auto; }
+.tree-item .verified-mark { color: #2ea043; font-size: 0.7rem; margin-left: auto; }
+.tree-item .draft-mark { color: #d29922; font-size: 0.65rem; margin-left: auto; text-transform: uppercase; }
+.tree-legend { padding: 0.75rem 1rem 0; font-size: 0.72rem; color: #6e7681; border-top: 1px solid #2d333b; margin-top: 0.5rem; }
+
+.training-main { flex: 1 1 auto; min-width: 0; padding: 2rem 2.5rem 4rem; }
+
+.module-crumb { font-family: var(--bs-font-monospace, monospace); color: #6c757d; font-size: 0.85rem; margin-bottom: 0.75rem; }
+.module-badges .badge { font-size: 0.72rem; font-weight: 600; }
+.badge-verified { background: #2ea043; }
+.badge-draft { background: #d29922; }
+.module-callout {
+  border-left: 4px solid var(--bimota-red);
+  background: #fdecee;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1.25rem 0;
+}
+.module-shot {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  max-width: 100%;
+}
+.module-shot-caption { font-size: 0.82rem; color: #6c757d; margin-top: -0.5rem; margin-bottom: 1.5rem; }
+.module-nav-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #dee2e6;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+.mark-complete-row {
+  border-top: 1px dashed #dee2e6;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .training-shell { flex-direction: column; }
+  .tree-sidebar {
+    width: 100%;
+    flex: none;
+    position: static;
+    max-height: 260px;
+  }
+  .training-main { padding: 1.5rem 1rem 3rem; }
+}

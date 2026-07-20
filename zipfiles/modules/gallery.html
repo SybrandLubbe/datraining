@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 Gallery — Bimota DA Training</title>
+<meta name="description" content="Image container that alternates 1-image and 2-image rows on larger screens; stacks on mobile.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body>
+<div id="site-nav" data-root=".."></div>
+<div class="jcr-path-bar" id="jcr-path-bar"></div>
+
+<div class="training-shell">
+  <nav class="tree-sidebar" id="tree-sidebar" data-root=".." data-current="gallery"></nav>
+
+  <main class="training-main">
+    <div class="module-crumb">/content/bimota-training/blocks/gallery</div>
+    <div class="module-badges mb-2">
+      <span class="badge bg-light text-dark border">Layout & content</span>
+      <span class="badge badge-verified">Verified guide</span>
+      <span class="text-secondary small ms-1">4 min read</span>
+    </div>
+    <h1 class="h2">Gallery</h1>
+    <p class="text-secondary">Image container that alternates 1-image and 2-image rows on larger screens; stacks on mobile.</p>
+
+    
+      <p class="lead fs-6">The gallery component is a container for images. The rows alternate by having <strong>1 image</strong> and <strong>2 images</strong> for larger screens (&gt;768px). Images stack below one another for mobile devices.</p>
+      <h2 class="h5 mt-4">Adding the block to a page</h2><p>Two ways to add it:</p><ol><li><strong>Copy from an existing page</strong> — open an existing page under your respective country folder that already has a Gallery block, copy it, and paste it into the document where you'd like the gallery, then add your preferred images in the columns.</li><li><strong>Use the Library</strong> — in da.live, click <strong>Library</strong> in the block toolbar, then choose <strong>Gallery</strong> from the list of available blocks, and go to the specific file to edit it.</li></ol><p class="module-callout">Always use a <strong>'section break'</strong> after each block to separate it from the previous block.</p><h2 class="h5 mt-4">The block skeleton</h2><p>The empty skeleton is simply a <strong>Gallery</strong> header cell followed by a series of empty rows — add one image to a row for a full-width single image, or two images in the same row for a side-by-side pair. Keep alternating single/double rows to get the alternating layout shown below.</p><h2 class="h5 mt-4">Desktop vs. mobile result</h2><p>On desktop (&gt;768px), a page with a Gallery block set up as one large image followed by two smaller side-by-side images renders exactly that way — one full-width image, then a row with two images sharing the width equally.</p><p>On mobile, the same content simply stacks: every image renders full-width, one directly below another, in the same top-to-bottom order they were authored in.</p>
+      
+      <h2 class="h5 mt-4">What you fill in</h2>
+      <table class="table table-sm table-bordered">
+        <tbody><tr><td class="fw-semibold" style="width:32%;">Gallery header row</td><td>Just the word "Gallery" in the first cell — marks the block.</td></tr><tr><td class="fw-semibold" style="width:32%;">Single-image row</td><td>One image — displays as a large single image on desktop.</td></tr><tr><td class="fw-semibold" style="width:32%;">Two-image row</td><td>Two images placed side by side in the same row — displays as a 2-up pair on screens wider than 768px. On mobile, every image in the gallery stacks full-width, one per row, in order.</td></tr></tbody>
+      </table>
+      
+      <img src="../assets/img/modules/gallery/img-000.png" alt="Copying the Gallery block from an existing page, or inserting it from the da.live Library panel." class="module-shot img-fluid">
+      <p class="module-shot-caption">Copying the Gallery block from an existing page, or inserting it from the da.live Library panel.</p>
+      <img src="../assets/img/modules/gallery/img-002.png" alt="Desktop view: one full-width image followed by a two-image row." class="module-shot img-fluid">
+      <p class="module-shot-caption">Desktop view: one full-width image followed by a two-image row.</p>
+      <img src="../assets/img/modules/gallery/img-003.png" alt="Mobile view: every image in the gallery stacks full-width, in order." class="module-shot img-fluid">
+      <p class="module-shot-caption">Mobile view: every image in the gallery stacks full-width, in order.</p>
+      <h2 class="h5 mt-4">Copy/paste snippet</h2>
+      <div class="code-wrap">
+        <pre class="code-block">| Gallery |  |
+|---|---|
+| ![Photo 1](/media/g1.jpg) |  |
+| ![Photo 2](/media/g2.jpg) | ![Photo 3](/media/g3.jpg) |</pre>
+      </div>
+      <p class="mt-3"><a href="https://github.com/kawaind/bimota/tree/main/blocks/gallery" target="_blank" rel="noopener">View source on GitHub &rarr;</a></p>
+      <div class="alert alert-success mt-4" role="alert">
+        <strong>Verified module.</strong> Written from Gallery Block guide (internal PDF).
+      </div>
+
+    <div class="mark-complete-row">
+      <button type="button" class="btn btn-outline-primary" id="mark-complete-btn" data-slug="gallery">Mark this module as reviewed</button>
+    </div>
+
+    <div class="module-nav-footer">
+      <div><a href="highlight.html">&larr; 09 Highlight</a></div>
+      <div><a href="carousel.html">11 Carousel &rarr;</a></div>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/modules-data.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/nav-tree.js" defer></script>
+</body>
+</html>
