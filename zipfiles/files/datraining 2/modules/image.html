@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12 Image — Bimota DA Training</title>
+<meta name="description" content="3 variants — single, two-image, and full-width sticky — each with a strict size/ratio checklist.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body>
+<div id="site-nav" data-root=".."></div>
+<div class="jcr-path-bar" id="jcr-path-bar"></div>
+
+<div class="training-shell">
+  <nav class="tree-sidebar" id="tree-sidebar" data-root=".." data-current="image"></nav>
+
+  <main class="training-main">
+    <div class="module-crumb">/content/bimota-training/blocks/image</div>
+    <div class="module-badges mb-2">
+      <span class="badge bg-light text-dark border">Layout & content</span>
+      <span class="badge badge-verified">Verified guide</span>
+      <span class="text-secondary small ms-1">5 min read</span>
+    </div>
+    <h1 class="h2">Image</h1>
+    <p class="text-secondary">3 variants — single, two-image, and full-width sticky — each with a strict size/ratio checklist.</p>
+
+    
+      <p class="lead fs-6">The Image block can be used in sections of a webpage where you'd like to showcase pictures — on a homepage or any content page like a 'Heritage' page. It has <strong>3 variants</strong>.</p>
+      <h2 class="h5 mt-4">The 3 variants</h2><ul><li><strong>2 images</strong> — the second image is smaller than the first one</li><li><strong>Single image</strong> — image ratio is 16:9</li><li><strong>Full width image</strong> — stretches edge to edge</li></ul><h2 class="h5 mt-4">1. Single image variant — UX checklist</h2><p>Table: <code>Image</code> header row, then one row with <code>&lt;&lt;add image here&gt;&gt;</code>.</p><p><strong>UX/UI checklist for this variant:</strong> Image ratio 16:9, 1440 × 810px (minimum).</p><h2 class="h5 mt-4">2. Two images variant — UX checklist</h2><p>Table: <code>Image</code> header row, then one row with two cells, each <code>&lt;&lt;add image here&gt;&gt;</code>.</p><p><strong>UX/UI checklist:</strong> First image ratio 4:3, 1440 × 1080px (min). Second image ratio 4:3, 1440 × 1080px (min).</p><p class="module-callout">Images are displayed next to each other, <strong>except on Viewport XS</strong>, where they stack below each other.</p><h2 class="h5 mt-4">3. Full-width sticky image variant — UX checklist</h2><p>Table: <code>Image (sticky)</code> header row, then one row with <code>&lt;&lt;add image here&gt;&gt;</code>.</p><p><strong>UX/UI checklist:</strong> Image ratio 16:9, 1440 × 810px (min).</p><p class="module-callout">The image <strong>stays sticky</strong> in the background while the rest of the page content scrolls over it.</p><h2 class="h5 mt-4">Adding the block</h2><p>Two ways to add it: <strong>copy the component block</strong> from an existing page under your respective country folder, or use the <strong>Library</strong> section from the da.live toolbar and choose the relevant variant from the list.</p><h2 class="h5 mt-4">Bonus: a dark section background</h2><p>Adding a <strong>Section Metadata</strong> block with <code>Style: dark</code> makes that section's background black. Add this at the end of a block (e.g. after an Image block) to make the background of that section dark.</p><div class="code-wrap"><pre class="code-block">Section Metadata
+Style | dark</pre></div>
+      
+      <h2 class="h5 mt-4">What you fill in</h2>
+      <table class="table table-sm table-bordered">
+        <tbody><tr><td class="fw-semibold" style="width:32%;">Image (single)</td><td>One image. Ratio 16:9, minimum 1440 × 810px.</td></tr><tr><td class="fw-semibold" style="width:32%;">Image (two images)</td><td>Two images side by side; the second is displayed smaller than the first. First image ratio 4:3, min 1440 × 1080px. Second image ratio 4:3, min 1440 × 1080px. They stack below each other only on viewport XS.</td></tr><tr><td class="fw-semibold" style="width:32%;">Image (sticky, full-width)</td><td>One full-width image. Ratio 16:9, min 1440 × 810px. Stays sticky in the background while page content scrolls over it.</td></tr><tr><td class="fw-semibold" style="width:32%;">Section Metadata: Style = dark</td><td>Optional companion block — add it after any block to switch that section's background to dark.</td></tr></tbody>
+      </table>
+      
+      <img src="../assets/img/modules/image/img-002.png" alt="Single image variant rendered on the page — 16:9 ratio." class="module-shot img-fluid">
+      <p class="module-shot-caption">Single image variant rendered on the page — 16:9 ratio.</p>
+      <img src="../assets/img/modules/image/img-004.png" alt="Two-image variant rendered side by side, the second smaller than the first." class="module-shot img-fluid">
+      <p class="module-shot-caption">Two-image variant rendered side by side, the second smaller than the first.</p>
+      <h2 class="h5 mt-4">Copy/paste snippet</h2>
+      <div class="code-wrap">
+        <pre class="code-block">| Image |  |
+|---|---|
+| &lt;&lt;add image here&gt;&gt; |  |
+
+| Image |  |
+|---|---|
+| &lt;&lt;add image here&gt;&gt; | &lt;&lt;add image here&gt;&gt; |
+
+| Image (sticky) |  |
+|---|---|
+| &lt;&lt;add image here&gt;&gt; |  |
+
+| Section Metadata |  |
+|---|---|
+| Style | dark |</pre>
+      </div>
+      <p class="mt-3"><a href="https://github.com/kawaind/bimota/tree/main/blocks/image" target="_blank" rel="noopener">View source on GitHub &rarr;</a></p>
+      <div class="alert alert-success mt-4" role="alert">
+        <strong>Verified module.</strong> Written from Image Block guide (internal PDF).
+      </div>
+
+    <div class="mark-complete-row">
+      <button type="button" class="btn btn-outline-primary" id="mark-complete-btn" data-slug="image">Mark this module as reviewed</button>
+    </div>
+
+    <div class="module-nav-footer">
+      <div><a href="carousel.html">&larr; 11 Carousel</a></div>
+      <div><a href="vehicle-selector.html">13 Vehicle Selector &rarr;</a></div>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/modules-data.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/nav-tree.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>09 Highlight — Bimota DA Training</title>
+<meta name="description" content="Scroll-animated image + headline + description callouts, with configurable animation timing.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body>
+<div id="site-nav" data-root=".."></div>
+<div class="jcr-path-bar" id="jcr-path-bar"></div>
+
+<div class="training-shell">
+  <nav class="tree-sidebar" id="tree-sidebar" data-root=".." data-current="highlight"></nav>
+
+  <main class="training-main">
+    <div class="module-crumb">/content/bimota-training/blocks/highlight</div>
+    <div class="module-badges mb-2">
+      <span class="badge bg-light text-dark border">Layout & content</span>
+      <span class="badge badge-verified">Verified guide</span>
+      <span class="text-secondary small ms-1">4 min read</span>
+    </div>
+    <h1 class="h2">Highlight</h1>
+    <p class="text-secondary">Scroll-animated image + headline + description callouts, with configurable animation timing.</p>
+
+    
+      <p class="lead fs-6">This component can be used on <strong>Product Pages</strong> or any content pages where you'd like to showcase highlights. It needs an image, a headline, and a description for each highlight, and holds a <strong>scroll-triggered animation</strong> behavior.</p>
+      <h2 class="h5 mt-4">Adding the block to a page</h2><p>Two ways to add it:</p><ol><li><strong>Copy from an existing page</strong> — open an existing page under your respective country folder that already has a Highlight block and copy it.</li><li><strong>Use the Library</strong> — in da.live, click <strong>Library</strong> in the block toolbar, then choose <strong>Highlight</strong> from the list of available blocks.</li></ol><h2 class="h5 mt-4">Seeing it in action</h2><p>The animation as the visitor scrolls can be seen in this reference video: <code>highlights-component.webm</code> (ask your development contact for a copy if you'd like to see it before publishing).</p>
+      
+      <h2 class="h5 mt-4">What you fill in</h2>
+      <table class="table table-sm table-bordered">
+        <tbody><tr><td class="fw-semibold" style="width:32%;">Block variant: Highlight (time-N)</td><td>N sets the scroll animation duration in seconds — e.g. Highlight (time-2) or Highlight (time-7). The animation time is configurable this way.</td></tr><tr><td class="fw-semibold" style="width:32%;">Image row</td><td>One shared image the highlights animate over.</td></tr><tr><td class="fw-semibold" style="width:32%;">Headline</td><td>The title for each highlight point, e.g. “Efficiency”.</td></tr><tr><td class="fw-semibold" style="width:32%;">Description</td><td>Supporting text under each headline.</td></tr></tbody>
+      </table>
+      
+      <img src="../assets/img/modules/highlight/img-002.png" alt="The Highlight block rendered live — shared background image with an animated 'Efficiency' headline and description." class="module-shot img-fluid">
+      <p class="module-shot-caption">The Highlight block rendered live — shared background image with an animated 'Efficiency' headline and description.</p>
+      <h2 class="h5 mt-4">Copy/paste snippet</h2>
+      <div class="code-wrap">
+        <pre class="code-block">| Highlight (time-2) |  |
+|---|---|
+| &lt;&lt;add image here&gt;&gt; |  |
+| &lt;&lt;Headline&gt;&gt; |  |
+| &lt;&lt;description&gt;&gt; |  |
+| &lt;&lt;Headline&gt;&gt; |  |
+| &lt;&lt;description&gt;&gt; |  |
+| &lt;&lt;Headline&gt;&gt; |  |
+| &lt;&lt;description&gt;&gt; |  |</pre>
+      </div>
+      <p class="mt-3"><a href="https://github.com/kawaind/bimota/tree/main/blocks/highlight" target="_blank" rel="noopener">View source on GitHub &rarr;</a></p>
+      <div class="alert alert-success mt-4" role="alert">
+        <strong>Verified module.</strong> Written from Highlights Block guide (internal PDF).
+      </div>
+
+    <div class="mark-complete-row">
+      <button type="button" class="btn btn-outline-primary" id="mark-complete-btn" data-slug="highlight">Mark this module as reviewed</button>
+    </div>
+
+    <div class="module-nav-footer">
+      <div><a href="feature.html">&larr; 08 Feature</a></div>
+      <div><a href="gallery.html">10 Gallery &rarr;</a></div>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/modules-data.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/nav-tree.js" defer></script>
+</body>
+</html>
